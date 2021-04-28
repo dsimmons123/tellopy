@@ -1,0 +1,19 @@
+from djitello
+from time imp
+tello = Tello
+             
+tello.connect
+             
+# Step 1     
+tello.takeoff
+             
+tello.send_rc
+sleep()      
+             
+# Step 2     
+tello.send_rc
+sleep()      
+             
+# step 3     
+tello.send_rc
+sleep(8.3)   
