@@ -2,9 +2,6 @@ from djitellopy import Tello
 
 from time import sleep
 
-
-# comments
-
 tello = Tello()
 
 tello.connect()
