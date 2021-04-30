@@ -13,16 +13,17 @@ tello.connect()
 tello.takeoff()
 
 # Leg 2 Move up to 6 ft
-tello.move_up(102)
+tello.send_rc_control(0,0,50,0)
+sleep(3.8)
 
 # Leg 3: Rotate 12 degrees counter clockwise
-
 tello.send_rc_control(0,0,0,-50)
-sleep(.5)
+sleep(.43)
 
 # Leg 4: Move forward 436cm (14.3 ft)
 tello.send_rc_control(0,50,0,0)
-sleep(5)
+sleep(4)
+
 tello.send_rc_control(0,0,0,0)
 
 # Leg 5: Land
