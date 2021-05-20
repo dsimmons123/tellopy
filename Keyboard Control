@@ -1,5 +1,5 @@
 
-from djitellopy import tello
+from djitellopy import Tello
 
 import KeyPressModule as kp
 
@@ -7,11 +7,11 @@ from time import sleep
 
 kp.init()
 
-me = tello.Tello()
+tello = Tello()
 
-me.connect()
+tello.connect()
 
-print(me.get_battery())
+print(tello.get_battery())
 
 def getKeyboardInput():
 
@@ -35,9 +35,9 @@ def getKeyboardInput():
 
     elif kp.getKey(“d”): yv = speed
 
-    if kp.getKey(“q”): me.land(); sleep(3)
+    if kp.getKey(“q”): tello.land(); sleep(3)
 
-    if kp.getKey(“e”): me.takeoff()
+    if kp.getKey(“e”): tello.takeoff()
 
     return [lr, fb, ud, yv]
 
