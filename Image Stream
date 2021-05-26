@@ -1,7 +1,7 @@
-me.streamon
+tello.streamon()
 
 while True:
-  img = me.get.frame_read().frame
+  img = tello.get_frame_read().frame
   img = cv2.resize(img, (360, 240))
   cv2.imshow("image", img)
   cv2.waitKey(1)
