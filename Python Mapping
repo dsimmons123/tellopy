@@ -1,4 +1,4 @@
-# Insert here are brief explanation of what this code does...
+### Insert here a brief explanation of what CODE SECTION 1 does ###
 #
 #
 
@@ -9,7 +9,9 @@ import numpy as np
 import time
 import math
 
-# Insert here are brief explanation of what this code does...
+### END CODE SECTION 1 ###
+
+# Insert here a brief explanation of what CODE SECTION 2 does ###
 #
 #
 
@@ -21,6 +23,10 @@ interval = 0.25
 dInterval = fSpeed * interval  # Distance Interval
 aInterval = aSpeed * interval  # Angular Interval
 #########################################
+
+
+### END CODE SECTION 2 ###
+
 x, y = 500, 500
 a = 0
 yaw = 0
@@ -35,7 +41,7 @@ points = []
 # global img
 # tello.streamon()
 
-# Insert here are brief explanation of what this code does...
+### Insert here are brief explanation of what CODE SECTION 3 does ###
 #
 #
 
@@ -82,11 +88,14 @@ def getKeyboardInput():
         tello.land()
         time.sleep(3)
     if kp.getKey("e"): tello.takeoff()
+    
+### END CODE SECTION 3 ###    
+
 
  #   if kp.getKey("z"):
  #       cv2.imwrite(f'Resources/Images/{time.time()}.jpg', img)
  #       time.sleep(0.3)
-
+ 
     time.sleep(interval)
     a += yaw
     x += int(d * math.cos(math.radians(a)))
@@ -95,7 +104,7 @@ def getKeyboardInput():
     return [lr, fb, ud, yv, x, y]
 
 
-# Insert here are brief explanation of what this code does...
+### Insert here a brief explanation of what CODE SECTION 4 does ###
 #
 #
 
@@ -104,8 +113,9 @@ def drawPoints(img, points):
     for point in points:
         cv2.circle(img, point, 5, (0, 0, 255), cv2.FILLED)
 
+### END CODE SECTION 4 ###    
 
-# Insert here are brief explanation of what this code does...
+### Insert here a brief explanation of what CODE SECTION 5 does ###
 #
 #
 
@@ -117,6 +127,9 @@ while True:
     drawPoints(img, points)
     cv2.imshow("Output", img)
     cv2.waitKey(1)
+    
+### END CODE SECTION 5 ###    
+
 
 ### Ignore the following code, it's related to the Surveillance program and not used in the MAPPING Program ###
 
